@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <style>
+	#upCm {						   
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: Dark;
+  background-color: lightblue;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: none;
+  transition: 0.4s;
+}
+	
+*{
+  box-sizing: border-box;
+}
 
 #myInput {
   background-image: url('assets/logos/search_icon.png');
@@ -14,7 +30,7 @@
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
-  border-radius: 10px;
+  border-radius: 10px;				   
 }
 
 .button {
@@ -44,8 +60,6 @@ body {
   padding-left: 10px;
   font-family: Arial;
 }
-
-/* Center website */
 .main {
   max-width: 1000px;
   margin: auto;
@@ -54,45 +68,27 @@ body {
 .row {
   margin: 10px -16px;
 }
-
-/* Add padding BETWEEN each column */
 .row,
 .row > .column {
-  padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  padding: 8px;
-  display: none; /* Hide all elements by default */
+  padding: 8px;											   
 }
 
 .column  {
-
 display: none;
 }
-
-/* Clear floats after rows */ 
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
-/* Content */
 .content {
   background-color: white;
   padding: 10px;
   border-radius: 25px;
 }
-
-/* The "show" class is added to the filtered elements */
 .show {
   display: block;
 }
-
-/* Style the buttons */
-
 .btn {
   border: none;
   outline: none;
@@ -112,15 +108,18 @@ display: none;
   color: white;
   transition: 0.1s;
 }
-
 </style>
-</head>
 <body dir="rtl" align="center">
 <div class="main">
+
+<!-- button onclick="updateComment()">הודעת עדכון</button>
+<div id="upCm">
+שלום וברכה לכולם. שימו לב! גירסא חדשה 1.5 זמינה כעת. לכל מי שיש גירסא 1.4 בלבד, ניתן להוריד את העדכון גירסא דרך ההגדרות של המכשיר. הגירסא החדשה כוללת הרשאת רוט, המאפשרת התקנה אוטומטית של האפליקציות בחנות, והורדת האפליקציות החדשות שהתווספו לחנות כגון נעילת יישומים, הסרטת מסך וכו'. העדכון גירסא כולל תיקונים ושידרוגים נוספים. מי שנתקל בבעיה בתהליך העדכון גירסא, מוזמן לפנות אליי במייל בשעות הצהריים.
+</div -->
+	
 <h2>חנות אפליקציות</h2>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="חיפוש.." title="כתוב את שם האפליקציה">
-
 <div id="myBtnContainer">
   <button class="btn"  onclick="filterSelection('media')">מדיה</button> 
   <button class="btn" onclick="filterSelection('tools')">עזרים</button>
@@ -132,7 +131,7 @@ display: none;
 </div>
 
 <div class="row">
-<div id="list">
+<div id="list">																							 
 				
 <!-- Google Play Services 
 <div class="column gapps"> <div class="content"> <h3>שירותי גוגל פליי</h3>
@@ -143,13 +142,13 @@ display: none;
 -->
   
 <!-- CLEANER -->
-<div class="column tools"> <div class="content"> <h3>ניקוי קבצים מיותרים</h3>
+<div class="column tools">  <div class="content"> <h3>ניקוי קבצים מיותרים</h3>
 <img src="assets/logos/cleaner_logo.png" width="128" height="128">
 <p>המכשיר מאחסן בתוכו את קבצי ההתקנות של האפליקציות, וכן קבצים מיותרים נוספים. מומלץ להשתמש במנקה הקבצים כדי לחסוך מקום באיחסון הפנימי.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21631&authkey=AL--wK7yzrfVpXU" class="button">לחץ להורדת המנקה</i></a></div></div>
 
 <!-- Gmail web -->
-<div class="column gapps"> <div class="content"> <h3>Gmail בתצוגת אתר</h3>
+<div class="column gapps"><div class="content"> <h3>Gmail בתצוגת אתר</h3>
 <img src="assets/logos/gmail_logo.png" width="150" height="150">
 <p>שימו לב! אפליקציה זו נועדה למי שאינו מצליח להתחבר לחשבון גוגל שלו דרך האפליקציה המובנית במכשיר. אפליקציה זאת מופעלת על ידי תצוגת אתר אינטרנט ולא תקבלו התראות למכשיר כשתקבלו מייל חדש. יש להיכנס מדי פעם לאפליקציה ולבדוק ידנית אם קיבלתם מייל חדש. יש להפעיל שליטת עכבר באפליקציה.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21575&authkey=AInbg0JSUqDDzqk" class="button"><i class="fa fa-download"></i></a></div></div>
@@ -157,7 +156,7 @@ display: none;
 <!-- WAZE -->
 <div class="column transport"> <div class="content"> <h3>Waze - נסיעה בדרכים</h3>
 <img src="assets/logos/waze_logo.png" width="180" height="180">
-<p>Waze היא אפליקציית הניווט ודיווחי התנועה הגדולה בעולם המתבססת על קהילת משתמשים.</p>
+<p>וויז היא אפליקציית הניווט ודיווחי התנועה הגדולה בעולם המתבססת על קהילת משתמשים.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21632&authkey=ADforRd2EJeXQOc" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- MOOVIT -->
@@ -177,7 +176,6 @@ display: none;
 <img src="assets/logos/hospitals_logo.png" width="180" height="180">
 <p>כל קופות החולים מותאם לשיאומי מקשים</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21696&authkey=AHxsts1m9aa3uFY" class="button"><i class="fa fa-download"></i></a></div></div>
-
 
 <!-- BANKS -->
 <div class="column tools"> <div class="content"> <h3>בנקים</h3>
@@ -248,7 +246,7 @@ display: none;
 <!-- GOOGLE MAPS  -->
 <div class="column gapps transport"> <div class="content"> <h3>Google Maps - מפות</h3>
 <img src="assets/logos/maps_logo.png" width="180" height="180">
-<p>מפות גוגל לשיאומי מקשים. יש להפעיל שליטת עכבר באפליקציה. הטעינה הראשונה לוקחת קצת זמן.</p>
+<p>מפות גוגל לשיאומי מקשים. יש להפעיל שליטת עכבר באפליקציה. הטעינה הראשונה לוקחת קצת זמן. שימו לב שלאחר ההתקנה האפליקציה נמצאת בתיקיית היישומים.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21580&authkey=AKNasTkpIfBoRi0" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE TRANSLATE  -->
@@ -257,11 +255,18 @@ display: none;
 <p>תרגום טקסט בין 103 שפות באמצעות הקלדה, הקלטה, ודרכים נוספות. אפשר להוריד את המילונים ולהשתמש בתרגום אף ללא חיבור אינטרנט.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21583&authkey=ANP7sFmFHnL7bpA" class="button"><i class="fa fa-download"></i></a></div></div>
 
-<!-- PDF Reader -->
-<div class="column tools"> <div class="content"> <h3>קורא PDF</h3>
-<img src="assets/logos/pdf_logo.png" width="160" height="160">
-<p>קורא קבצי PDF. יש להפעיל שליטת עכבר באפליקציה. ניתן לעשום זום בתוך המסמך על ידי לחיצה על מקש הניווט האמצעי + מקש לאחד הצדדים, ואז יופיעו כפתורי הזום.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21605&authkey=AMDkibzAqTSpRb4" class="button"><i class="fa fa-download"></i></a></div></div>
+<!-- Xodo Docs -->
+<div class="column tools"> <div class="content"> <h3>Xodo Docs</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/xodo_logo.png" width="160" height="160">
+<p>קוראי קבצי PDF איכותי לשיאומי</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21839&authkey=ABfRPeOi89LD208" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- AlReader -->
+<div class="column tools"> <div class="content"> <h3>AlReader - קורא מסמכים</h3>
+<img src="assets/logos/alreader_logo.png" width="160" height="160">
+<p>קורא מסמכים תומך מקשים לשיאומי. ניתן גם לקרוא קבצי וורד.</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21746&authkey=APZvo6mFUWSGfnk" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- GOOGLE KEEP  -->
 <div class="column gapps"> <div class="content"> <h3>Google Keep - הערות גוגל</h3>
@@ -335,38 +340,37 @@ display: none;
 <p>מנהל קבצים מתקדם לשיאומי מקשים</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21572&authkey=AG87Qdt6PRzMOvA" class="button"><i class="fa fa-download"></i></a></div></div>
 
+<!-- Applock -->
+<div class="column tools"> <div class="content"> <h3>נועל יישומים</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/applock_logo.png" width="140" height="140">
+<p>שימו לב להוראות: יש להשתמש במקלדת קין המתקדמת, להפעיל את העכבר בפעם הראשונה ליצירת סיסמא, ואחר כך לשנות את תבנית הסיסמא לתווים דרך ההגדרות, בכדי להשתמש בנעילה ללא צורך בעכבר.</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21768&authkey=AJyfAdYPPEfmkQg" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Backup -->
+<div class="column tools"> <div class="content"> <h3>גיבוי שיחות והודעות</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/backup_logo.png" width="160" height="160">
+<p>גיבוי שיחות, הודעות, אנשי קשר, יומני שיחות, ולוח שנה, למכשיר <b>ולגוגל דרייב</b>. נערך מחדש והותאם במיוחד לשיאומי.</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21841&authkey=AHnIFWOEG9xzhbw" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Shopping -->
+<div class="column tools"> <div class="content"> <h3>רשימת קניות</h3>
+<img src="assets/logos/shopping_logo.png" width="160" height="160">
+<p>רשימת קניות מסתנכרנת. ניתן ליצור חשבון באפליקציה ולהתחבר אליו. לא ניתן להתחבר דרך גוגל.</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21772&authkey=APYnbU-svNRhdt4" class="button"><i class="fa fa-download"></i></a></div></div>
+
 <!-- ColorNote -->
 <div class="column tools"> <div class="content"> <h3>פתקים - ColorNote</h3>
 <img src="assets/logos/colornote_logo.png" width="180" height="180">
 <p>אפליקציה נוחה מאוד לכתיבת פתקים, רשימות והערות.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21571&authkey=ALDAUcLTBhN9pfQ" class="button"><i class="fa fa-download"></i></a></div></div>
 
-<!-- SoundAbout -->
-<div class="column tools"> <div class="content"> <h3>תיקון בעיה באוזניות</h3>
-<img src="assets/logos/soundabout_logo.png" width="92" height="92">
-<p>נא להוריד רק אם קרה לכם את הבעיה של האוזניה!
-אפליקציה שמתקנת את בעיית האוזנייה הידועה.
-לבחור בלשונית הראשונה "ON - No Status"
-ובלשונית השלישית "Earpiece".</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21614&authkey=APsMj3dpyWgQ80g" class="button"><i class="fa fa-download"></i></a></div></div>
-
-<!-- Volume Control -->
-<div class="column tools"> <div class="content"> <h3>שליטה בווליום עם העכבר</h3>
-<img src="assets/logos/volume_logo.png" width="160" height="160">
-<p>היכנס לאפליקציה ויופיע לך על המסך כפתורים לשליטה בעוצמת הווליום באמצעות העכבר.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21622&authkey=AAxAMFzXy3BX448" class="button"><i class="fa fa-download"></i></a></div></div>
-
 <!-- Rotate Control -->
 <div class="column tools"> <div class="content"> <h3>סיבוב מסך</h3>
 <img src="assets/logos/rotate_logo.png" width="160" height="160">
 <p>אפליקציה לשליטה על סיבוב מסך התצוגה באפליקציות.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21610&authkey=AGFxAoWy-AjymA0" class="button"><i class="fa fa-download"></i></a></div></div>
-
-<!-- Vibrate Control -->
-<div class="column tools"> <div class="content"> <h3>שליטה ברטט</h3>
-<img src="assets/logos/vibrate_logo.png" width="160" height="160">
-<p>אפליקציה לשליטה על הרטט בשימוש האפליקציות. אפשר למשל להאריך את משך הרטט בתזכורת של הלוח שנה.</p>
-<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21620&authkey=AMWS5Nw3fwxZdA4" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Bluetooth Contacts -->
 <div class="column tools"> <div class="content"> <h3>העברת אנשי קשר בבלוטוס</h3>
@@ -380,6 +384,20 @@ display: none;
 <p>חיבור מצלמת MTcam לשיאומי מקשים.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21640&authkey=AISFCoKi58J3eHE" class="button"><i class="fa fa-download"></i></a></div></div>
 
+<!-- Smart Life -->
+<div class="column tools"> <div class="content"> <h3>Smart Life - בית חכם</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/smartlife_logo.png" width="160" height="160">
+<p>בית חכם - שליטה על מוצרי חשמל באמצעות המכשיר.</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21842&authkey=ALhmOVSHq2ieJGw" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- MiFit -->
+<div class="column tools"> <div class="content"> <h3>Mi Fit</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/MiFit_logo.png" width="160" height="160">
+<p>Mi Fit לשיאומי מקשים</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21773&authkey=AD2ZLBlVYtd2fLo" class="button"><i class="fa fa-download"></i></a></div></div>
+
 <!-- Guitar Tuner -->
 <div class="column tools"> <div class="content"> <h3>מכוון גיטרה</h3>
 <img src="assets/logos/gtuner_logo.png" width="144" height="144">
@@ -392,17 +410,37 @@ display: none;
 <p>יצירה וחתיכת רינגטונים לשיאומי. האפליקציה תומכת במקשים במלואה.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21641&authkey=AIEPhm7PGpZgHXw" class="button"><i class="fa fa-download"></i></a></div></div>
  
+<!-- Nedarim -->
+<div class="column tools"> <div class="content"> <h3>נדרים פלוס</h3>
+<img src="assets/logos/nedarim_logo.png" width="180" height="180">
+<p>נדרים פלוס.</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21778&authkey=AJqd11Nhx5QXbyw" class="button"><i class="fa fa-download"></i></a></div></div>
+	
 <!-- Weather -->
 <div class="column tools"> <div class="content"> <h3>מזג האוויר</h3>
 <img src="assets/logos/weather_logo.png" width="180" height="180">
 <p>מזג האוויר בכל הערים בארץ.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21638&authkey=ANTTG3cAC0meHZ0" class="button"><i class="fa fa-download"></i></a></div></div>
 	
-	<!-- Yedidim -->
+<!-- Kumta -->
+<div class="column tools"> <div class="content"> <h3>כומתה - צבע אדום</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/kumta_logo.png" width="180" height="180">
+<p>התרעות צבע אדום</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21775&authkey=ADTYESVBIuoBeCA" class="button"><i class="fa fa-download"></i></a></div></div>
+	
+<!-- Yedidim -->
 <div class="column tools"> <div class="content"> <h3>ידידים מתנדבים</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
 <img src="assets/logos/yedidim_logo.png" width="160" height="160">
-<p>ידידים כוננות. הערה: יש הודעת שגיאה בהתחלה יש להתעלם ממנה.</p>
+<p>ידידים כוננות</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21739&authkey=AOHXKoaS1_l0NeQ" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Kol Rega -->
+<div class="column tools"> <div class="content"> <h3>כל רגע</h3>
+<img src="assets/logos/kolrega_logo.png" width="180" height="180">
+<p>אתר החדשות כל רגע</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21776&authkey=AFTgM8JgbjgwrII" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Kikar Hashabat -->
 <div class="column tools"> <div class="content"> <h3>כיכר השבת</h3>
@@ -528,7 +566,6 @@ class="button"><i class="fa fa-download"></i></a></div></div>
 <img src="assets/logos/sidurhabad_logo.png" width="180" height="180">
 <p>סידור בנוסח חב"ד<br>האפליקציה תומכת מקשים</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21698&authkey=AAe-5mcM9-ZtsjA" class="button"><i class="fa fa-download"></i></a></div></div>
-		
 	
 <!-- TORAT YASHIYAHU -->
 <div class="column books"> <div class="content"> <h3>תורת יאשיהו</h3>
@@ -573,10 +610,8 @@ class="button"><i class="fa fa-download"></i></a></div></div>
 <p>סיפורי מעשיות מאת ר' נחמן מברסלב כולל תיקון הכללי.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21612&authkey=AFhJAeNqTvR2V_Y" class="button"><i class="fa fa-download"></i></a></div></div>
 
-<!-- ## GAMES ## -->
 <!-- Gold Miner -->
-<div class="column games" >
-    <div class="content"> <h3>מכרה הזהב</h3>
+<div class="column games" > <div class="content"> <h3>מכרה הזהב</h3>
 <img src="assets/logos/goldminer_logo.png" width="160" height="160">
 <p>משחק מאתגר בו תצטרכו לאסוף את הזהב הנדרש, ולעמוד ביעדים תוך זמן קצר.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21579&authkey=AA9nWGVkPx9js8g" class="button"><i class="fa fa-download"></i></a></div></div>
@@ -592,6 +627,26 @@ class="button"><i class="fa fa-download"></i></a></div></div>
 <img src="assets/logos/hitknife_logo.png" width="160" height="160">
 <p>לקלוע חרבות לתוך העיגול במרכז מבלי לפגוע בחרבות אחרות. יש להפעיל שליטת עכבר באפליקציה.</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21602&authkey=AJHhrSj2z94E8do" class="button"><i class="fa fa-download"></i></a></div></div>
+	
+<!-- Rider -->
+<div class="column games"> <div class="content"> <h3>רוכב - Rider</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/rider_logo.png" width="160" height="160">
+<p>משחק רכיבה. יש להפעיל עכבר באפליקציה.</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21771&authkey=AHk-9otscrnqyTk" class="button"><i class="fa fa-download"></i></a></div></div>
+
+<!-- Cars -->
+<div class="column games"> <div class="content"> <h3>משחק מכוניות</h3>
+<p style="color:red;">עובד מגירסא 1.5 ומעלה!</p>
+<img src="assets/logos/cars_logo.png" width="160" height="160">
+<p>משחק מכוניות. יש להפעיל עכבר באפליקציה.</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21777&authkey=AEi_oYBfp44I3EQ" class="button"><i class="fa fa-download"></i></a></div></div>
+		
+<!-- JAR Games -->
+<div class="column games"> <div class="content"> <h3>משחקי JAR</h3>
+<img src="assets/logos/jar_logo.png" width="160" height="160">
+<p>מריץ משחקים של קבצי JAR</p>
+<a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21767&authkey=AHN50SCaEqy4mlc" class="button"><i class="fa fa-download"></i></a></div></div>
 
 <!-- Sudoku -->
 <div class="column games"> <div class="content"> <h3>סודוקו</h3>
@@ -622,126 +677,9 @@ class="button"><i class="fa fa-download"></i></a></div></div>
 <img src="assets/logos/hexagon_logo.png" width="144" height="144">
 <p>משחק חשיבה מאתגר</p>
 <a href="https://onedrive.live.com/download?cid=3DECED29310D2874&resid=3DECED29310D2874%21589&authkey=ALDFy4vHH-_Phnk" class="button"><i class="fa fa-download"></i></a></div></div>
+
 </div></div></div>
-
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-    
-    
-    var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    }}
-    
-    if( !isMobile.Android() )
-   {
-    
-     var y = document.getElementById('idGames');
-    y.style.display = 'none';
-    
-    var z = document.getElementsByClassName("column games");
-var g;
-for (g = 0; g < z.length; g++) {
-    z[g].style.display = 'none';
-}
-   
-   }
-   
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-
-<script>
-var input = document.getElementById("myInput");
-input.addEventListener("input", myFunction);
-
-function myFunction(e) {
-
-
-  var filter = e.target.value.toUpperCase();
-
-  var list = document.getElementById("list");
-  var divs = list.getElementsByTagName("div");
-  var g;
-  for (var i = 0; i < divs.length; i++) {
-    var a = divs[i].getElementsByTagName("h3")[0];
-	var b = divs[i].getElementsByTagName("p")[0];
-   
-      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        divs[i].style.display = "";
-		
-		
-      } else {
-	  if (b.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        divs[i].style.display = "";
-	
-      }
-	  else
-	  {
-        divs[i].style.display = "none";
-      }
-	  }
-	  
-    var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    }}
-    
-    if( !isMobile.Android() )
-   {
-    
-    var z = document.getElementsByClassName("column games");
-var g;
-for (g = 0; g < z.length; g++) {
-    z[g].style.display = 'none';
-}
-   
-   }
-	
-  }
-
-}
-</script>
+<script src="script.js"></script>
 
 <br><br><div id="copyright"><br>
 <img src="assets/logos/ic_kosher.png" alt="החנות הכשרה" width="72" height="72">
